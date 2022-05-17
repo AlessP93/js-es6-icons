@@ -5,8 +5,11 @@
 
 // Aggiungere alla pagina una select in cui le options corrispondono ai vari tipi di icone (animal, vegetable, user). Quando l'utente seleziona un tipo dalla select, visualizzare solamente le icone corrispondenti.
 
+// listare ogni elemento dell'array
+// creare l'html con il template literal
+// inserirlo nel contenitore
 
-[
+const card = [
 	{
 		name: 'cat',
 		prefix: 'fa-',
@@ -120,3 +123,10 @@
 		color: 'blue'
 	}
 ];
+
+for (let i = 0; i < card.length; i++) {
+	const element = document.createElement("div");
+	element.classList.add("card");
+	element.innerHTML = i;
+	card.append(element);
+}
