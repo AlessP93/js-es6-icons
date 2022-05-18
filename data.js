@@ -124,9 +124,4 @@ const card = [
 	}
 ];
 
-for (let i = 0; i < card.length; i++) {
-	const element = document.createElement("div");
-	element.classList.add("card");
-	element.innerHTML = i;
-	card.append(element);
-}
+
