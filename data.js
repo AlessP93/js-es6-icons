@@ -9,7 +9,7 @@
 // creare l'html con il template literal
 // inserirlo nel contenitore
 
-const card = [
+const cards = [
 	{
 		name: 'cat',
 		prefix: 'fa-',
@@ -124,4 +124,14 @@ const card = [
 	}
 ];
 
+const containerHtml = document.querySelector(".container");
+const template = document.querySelector("#template").content;
 
+for (let i = 0; i < cards.length; i++) {
+	const box = template.cloneNode(true);
+	const {name, prefix, type, family, color} = cards[i];
+	box.querySelector("i").classList.add(family);
+	box.querySelector("i").classList.add(prefix + name);
+	box.querySelector(".box-text").innerHTML = name;
+	containerHtml.append(box)
+}
