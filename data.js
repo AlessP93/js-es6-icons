@@ -133,5 +133,6 @@ for (let i = 0; i < cards.length; i++) {
 	box.querySelector("i").classList.add(family);
 	box.querySelector("i").classList.add(prefix + name);
 	box.querySelector(".box-text").innerHTML = name;
+	box.querySelector("i").style.color = color;
 	containerHtml.append(box)
 }
